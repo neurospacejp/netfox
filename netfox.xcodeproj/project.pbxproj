@@ -63,16 +63,6 @@
 		B3F8BAB01C833AC700F9FBEA /* NFXListController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAA91C833AC700F9FBEA /* NFXListController_iOS.swift */; };
 		B3F8BAB11C833AC700F9FBEA /* NFXSettingsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAAA1C833AC700F9FBEA /* NFXSettingsController_iOS.swift */; };
 		B3F8BAB21C833AC700F9FBEA /* NFXStatisticsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAAB1C833AC700F9FBEA /* NFXStatisticsController_iOS.swift */; };
-		B3F8D67B1C833B1700F9FBEA /* NetfoxWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F8D6711C833B1700F9FBEA /* NetfoxWindow.xib */; };
-		B3F8D67C1C833B1700F9FBEA /* NFXDetailsController_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6721C833B1700F9FBEA /* NFXDetailsController_OSX.swift */; };
-		B3F8D67D1C833B1700F9FBEA /* NFXInfoController_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6731C833B1700F9FBEA /* NFXInfoController_OSX.swift */; };
-		B3F8D67E1C833B1700F9FBEA /* NFXListCell_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6741C833B1700F9FBEA /* NFXListCell_OSX.swift */; };
-		B3F8D67F1C833B1700F9FBEA /* NFXListCell_OSX.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F8D6751C833B1700F9FBEA /* NFXListCell_OSX.xib */; };
-		B3F8D6801C833B1700F9FBEA /* NFXListController_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6761C833B1700F9FBEA /* NFXListController_OSX.swift */; };
-		B3F8D6811C833B1700F9FBEA /* NFXResponseTypeCell_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6771C833B1700F9FBEA /* NFXResponseTypeCell_OSX.swift */; };
-		B3F8D6821C833B1700F9FBEA /* NFXResponseTypeCell_OSX.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F8D6781C833B1700F9FBEA /* NFXResponseTypeCell_OSX.xib */; };
-		B3F8D6831C833B1700F9FBEA /* NFXSettingsController_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D6791C833B1700F9FBEA /* NFXSettingsController_OSX.swift */; };
-		B3F8D6841C833B1700F9FBEA /* NFXStatisticsController_OSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8D67A1C833B1700F9FBEA /* NFXStatisticsController_OSX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,16 +115,6 @@
 		B3F8BAA91C833AC700F9FBEA /* NFXListController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListController_iOS.swift; sourceTree = "<group>"; };
 		B3F8BAAA1C833AC700F9FBEA /* NFXSettingsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXSettingsController_iOS.swift; sourceTree = "<group>"; };
 		B3F8BAAB1C833AC700F9FBEA /* NFXStatisticsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXStatisticsController_iOS.swift; sourceTree = "<group>"; };
-		B3F8D6711C833B1700F9FBEA /* NetfoxWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetfoxWindow.xib; sourceTree = "<group>"; };
-		B3F8D6721C833B1700F9FBEA /* NFXDetailsController_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXDetailsController_OSX.swift; sourceTree = "<group>"; };
-		B3F8D6731C833B1700F9FBEA /* NFXInfoController_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXInfoController_OSX.swift; sourceTree = "<group>"; };
-		B3F8D6741C833B1700F9FBEA /* NFXListCell_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListCell_OSX.swift; sourceTree = "<group>"; };
-		B3F8D6751C833B1700F9FBEA /* NFXListCell_OSX.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NFXListCell_OSX.xib; sourceTree = "<group>"; };
-		B3F8D6761C833B1700F9FBEA /* NFXListController_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListController_OSX.swift; sourceTree = "<group>"; };
-		B3F8D6771C833B1700F9FBEA /* NFXResponseTypeCell_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXResponseTypeCell_OSX.swift; sourceTree = "<group>"; };
-		B3F8D6781C833B1700F9FBEA /* NFXResponseTypeCell_OSX.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NFXResponseTypeCell_OSX.xib; sourceTree = "<group>"; };
-		B3F8D6791C833B1700F9FBEA /* NFXSettingsController_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXSettingsController_OSX.swift; sourceTree = "<group>"; };
-		B3F8D67A1C833B1700F9FBEA /* NFXStatisticsController_OSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXStatisticsController_OSX.swift; sourceTree = "<group>"; };
 		E20FD2E91C6912D400DCFF61 /* netfox_osx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = netfox_osx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -249,29 +229,11 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		B3F8D6701C833B1700F9FBEA /* OSX */ = {
-			isa = PBXGroup;
-			children = (
-				B3F8D6711C833B1700F9FBEA /* NetfoxWindow.xib */,
-				B3F8D6721C833B1700F9FBEA /* NFXDetailsController_OSX.swift */,
-				B3F8D6731C833B1700F9FBEA /* NFXInfoController_OSX.swift */,
-				B3F8D6741C833B1700F9FBEA /* NFXListCell_OSX.swift */,
-				B3F8D6751C833B1700F9FBEA /* NFXListCell_OSX.xib */,
-				B3F8D6761C833B1700F9FBEA /* NFXListController_OSX.swift */,
-				B3F8D6771C833B1700F9FBEA /* NFXResponseTypeCell_OSX.swift */,
-				B3F8D6781C833B1700F9FBEA /* NFXResponseTypeCell_OSX.xib */,
-				B3F8D6791C833B1700F9FBEA /* NFXSettingsController_OSX.swift */,
-				B3F8D67A1C833B1700F9FBEA /* NFXStatisticsController_OSX.swift */,
-			);
-			path = OSX;
-			sourceTree = "<group>";
-		};
 		CEFE42B41C0DDBD8001A56E0 /* netfox */ = {
 			isa = PBXGroup;
 			children = (
 				B3F8BA701C833ABC00F9FBEA /* Core */,
 				B3F8BAA41C833AC700F9FBEA /* iOS */,
-				B3F8D6701C833B1700F9FBEA /* OSX */,
 			);
 			path = netfox;
 			sourceTree = "<group>";
@@ -418,9 +380,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F8D6821C833B1700F9FBEA /* NFXResponseTypeCell_OSX.xib in Resources */,
-				B3F8D67B1C833B1700F9FBEA /* NetfoxWindow.xib in Resources */,
-				B3F8D67F1C833B1700F9FBEA /* NFXListCell_OSX.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,28 +439,21 @@
 				8201A39F204E452200AB2C3D /* NFXLoader.m in Sources */,
 				8201A39E204E451900AB2C3D /* NFXAuthenticationChallengeSender.swift in Sources */,
 				B3F8BA831C833ABC00F9FBEA /* NFX.swift in Sources */,
-				B3F8D67E1C833B1700F9FBEA /* NFXListCell_OSX.swift in Sources */,
 				B3F8BA8B1C833ABC00F9FBEA /* NFXGenericBodyDetailsController.swift in Sources */,
 				B3F8BA911C833ABC00F9FBEA /* NFXHTTPModel.swift in Sources */,
 				B3F8BAA11C833ABC00F9FBEA /* NFXStatisticsController.swift in Sources */,
-				B3F8D67D1C833B1700F9FBEA /* NFXInfoController_OSX.swift in Sources */,
-				B3F8D6831C833B1700F9FBEA /* NFXSettingsController_OSX.swift in Sources */,
-				B3F8D67C1C833B1700F9FBEA /* NFXDetailsController_OSX.swift in Sources */,
 				B3F8BA8F1C833ABC00F9FBEA /* NFXHelper.swift in Sources */,
 				B3F8BA871C833ABC00F9FBEA /* NFXConstants.swift in Sources */,
 				B3F8BA9B1C833ABC00F9FBEA /* NFXProtocol.swift in Sources */,
-				B3F8D6811C833B1700F9FBEA /* NFXResponseTypeCell_OSX.swift in Sources */,
 				B3F8BA951C833ABC00F9FBEA /* NFXImageBodyDetailsController.swift in Sources */,
 				B3F8BA9F1C833ABC00F9FBEA /* NFXSettingsController.swift in Sources */,
 				B3F8BAA31C833ABC00F9FBEA /* NFXWindowController.swift in Sources */,
 				B3F8BA851C833ABC00F9FBEA /* NFXAssets.swift in Sources */,
-				B3F8D6841C833B1700F9FBEA /* NFXStatisticsController_OSX.swift in Sources */,
 				B3F8BA8D1C833ABC00F9FBEA /* NFXGenericController.swift in Sources */,
 				B3F8BA931C833ABC00F9FBEA /* NFXHTTPModelManager.swift in Sources */,
 				B3F8BA891C833ABC00F9FBEA /* NFXDetailsController.swift in Sources */,
 				B3F8BA991C833ABC00F9FBEA /* NFXListController.swift in Sources */,
 				B3F8BA9D1C833ABC00F9FBEA /* NFXRawBodyDetailsController.swift in Sources */,
-				B3F8D6801C833B1700F9FBEA /* NFXListController_OSX.swift in Sources */,
 				B3F8BA971C833ABC00F9FBEA /* NFXInfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
