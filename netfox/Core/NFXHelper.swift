@@ -402,6 +402,9 @@ extension String
     
     static func implementNetfox() {
         guard firstOccurrence else { return }
+
+        NFXAdditions().storeLogFile()
+
         firstOccurrence = false
 
         // First let's make sure setter: URLSessionConfiguration.protocolClasses is de-duped
@@ -411,6 +414,12 @@ extension String
         // Now, let's make sure NFXProtocol is always included in the default configuration(s)
         // Adding it twice won't be an issue anymore, because we've de-duped the setter
         swizzleDefault()
+        
+        // start netfox
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            NFX.sharedInstance().setGesture(.custom)
+            NFX.sharedInstance().start()
+        }
     }
     
     private static func swizzleProtocolSetter() {

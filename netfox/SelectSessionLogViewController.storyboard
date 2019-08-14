@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Session Log View Controller-->
+        <scene sceneID="8AL-tK-xg0">
+            <objects>
+                <viewController storyboardIdentifier="SelectSessionLogViewController" id="Sj7-pW-wOx" customClass="SelectSessionLogViewController" customModule="lee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bS6-4Z-oFw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-l1-m9Z">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="SessionLogFileInfoCell" id="UBd-QK-bj7">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UBd-QK-bj7" id="4Mb-ZJ-8D9">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="10001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beL-0c-GKC">
+                                                    <rect key="frame" x="20" y="7" width="42" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Gi1-td-Qwh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="beL-0c-GKC" firstAttribute="centerY" secondItem="4Mb-ZJ-8D9" secondAttribute="centerY" id="FNR-bM-psB"/>
+                                                <constraint firstItem="beL-0c-GKC" firstAttribute="leading" secondItem="4Mb-ZJ-8D9" secondAttribute="leading" constant="20" id="HVe-HY-i2q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Sj7-pW-wOx" id="sG2-3K-hSc"/>
+                                    <outlet property="delegate" destination="Sj7-pW-wOx" id="tAV-yM-8Gb"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kil-Fk-Eyc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NJ7-mF-r44"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="TDy-YN-uMn">
+                                        <barButtonItem key="leftBarButtonItem" title="close" id="k3O-kF-c1D">
+                                            <connections>
+                                                <action selector="close" destination="Sj7-pW-wOx" id="dyn-jN-YbQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Send" id="sfA-Vt-7qQ">
+                                            <connections>
+                                                <action selector="showMailer" destination="Sj7-pW-wOx" id="AnN-HE-4lZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kil-Fk-Eyc" firstAttribute="trailing" secondItem="Wra-X7-H48" secondAttribute="trailing" id="L9D-8m-UhX"/>
+                            <constraint firstItem="Wra-X7-H48" firstAttribute="trailing" secondItem="Zb2-l1-m9Z" secondAttribute="trailing" id="MRj-52-zHa"/>
+                            <constraint firstItem="Kil-Fk-Eyc" firstAttribute="top" secondItem="Wra-X7-H48" secondAttribute="top" id="Tft-vy-4wh"/>
+                            <constraint firstItem="Zb2-l1-m9Z" firstAttribute="leading" secondItem="Wra-X7-H48" secondAttribute="leading" id="WlP-IX-LYb"/>
+                            <constraint firstItem="Kil-Fk-Eyc" firstAttribute="leading" secondItem="Wra-X7-H48" secondAttribute="leading" id="ZSu-XQ-HUd"/>
+                            <constraint firstItem="Zb2-l1-m9Z" firstAttribute="bottom" secondItem="Wra-X7-H48" secondAttribute="bottom" id="az7-bc-Iag"/>
+                            <constraint firstItem="Zb2-l1-m9Z" firstAttribute="top" secondItem="Kil-Fk-Eyc" secondAttribute="bottom" id="xeL-UZ-sSn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wra-X7-H48"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Zb2-l1-m9Z" id="Ltx-Hy-xi2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShQ-cH-al8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>
