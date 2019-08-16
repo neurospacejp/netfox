@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MessageUI
 
-class SelectSessionLogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+open class SelectSessionLogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
 
@@ -22,17 +22,17 @@ class SelectSessionLogViewController: UIViewController, UITableViewDelegate, UIT
 
     let mailViewController = MFMailComposeViewController()
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.sessionLogFileNames = nfxAdditions.getSessionLogFileNames().sorted(by: >)
         tableView.reloadData()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sessionLogFileNames.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionLogFileInfoCell") ?? UITableViewCell()
         if let label = getView(view: cell, tag: LableTag) as? UILabel {
             label.text = sessionLogFileNames[indexPath.row]
@@ -41,7 +41,7 @@ class SelectSessionLogViewController: UIViewController, UITableViewDelegate, UIT
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let isSelected = selectedIndexs.contains(indexPath.row)
         if isSelected {
@@ -95,7 +95,7 @@ extension SelectSessionLogViewController: MFMailComposeViewControllerDelegate {
   }
   
     // delegate
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
         switch result {
         case .cancelled:
