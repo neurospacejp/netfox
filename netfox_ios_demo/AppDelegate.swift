@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+       
+        print("infolog: \(#line)  \(#function) \(NFXAdditions().concatLogPath)") // swift log
         
-        NFX.sharedInstance().start()
-        
+
         return true
     }
 

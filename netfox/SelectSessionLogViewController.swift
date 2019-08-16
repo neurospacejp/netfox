@@ -40,14 +40,14 @@ class SelectSessionLogViewController: UIViewController, UITableViewDelegate, UIT
         cell.accessoryType = selectedIndexs.contains(indexPath.row) ? .checkmark : .none
         return cell
     }
-   
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let isSelected = selectedIndexs.contains(indexPath.row)
         if isSelected {
             selectedIndexs = selectedIndexs.filter { $0 != indexPath.row }
         } else {
-           selectedIndexs.append(indexPath.row)
+            selectedIndexs.append(indexPath.row)
         }
         tableView.reloadData()
     }

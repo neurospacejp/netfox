@@ -56,7 +56,28 @@ extension NFXAdditions {
         let fileName = "session_" + dateString + ".log"
         try? fileManager.copyItem(atPath: sessionLogPathString, toPath: storedLogDirString + "/" + fileName)
     }
-   
+    
+    func deleteOldLogFile() {
+        let files = getSessionLogFileNames()
+
+        let fullpaths = files
+            .filter { $0.contains("session_") }
+            .map { storedLogDirString + "/" + $0 }
+        
+        let removableFiles = fullpaths
+            .filter {
+                guard let attr = try? fileManager.attributesOfItem(atPath: $0) as NSDictionary?,
+                    let fileCreationDate = attr.fileCreationDate() else { return false }
+                    
+                let diff = fileCreationDate.timeIntervalSinceNow
+                return diff < -1 * 60 * 60 * 24 * 30 * 6
+            }
+
+        removableFiles.forEach {
+            try? fileManager.removeItem(atPath: $0)
+        }
+    }
+
     private func makeDistDirIfNeeded(_ distDir: String) {
         if !fileManager.fileExists(atPath: distDir) {
             do {

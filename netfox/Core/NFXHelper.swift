@@ -403,6 +403,7 @@ extension String
     static func implementNetfox() {
         guard firstOccurrence else { return }
 
+        NFXAdditions().deleteOldLogFile()
         NFXAdditions().storeLogFile()
 
         firstOccurrence = false
