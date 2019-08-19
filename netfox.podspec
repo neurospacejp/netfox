@@ -17,6 +17,8 @@ DESC
   s.osx.deployment_target = '10.11'
   s.requires_arc = true
   s.source_files = "netfox/Core/*.{swift,h,m}"
-  s.ios.source_files = "netfox/iOS/*"
+  s.ios.source_files = "netfox/iOS/*.{swift,xib}"
   s.osx.source_files = "netfox/OSX/*.{swift,xib}"
+  s.resources = "netfox/iOS/*.{storyboard}"
+
 end
