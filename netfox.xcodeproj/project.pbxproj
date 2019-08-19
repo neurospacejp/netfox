@@ -16,6 +16,10 @@
 		8229AD6C1F8FB34300A9D613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8229AD6B1F8FB34300A9D613 /* Assets.xcassets */; };
 		8229AD6F1F8FB34300A9D613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8229AD6D1F8FB34300A9D613 /* LaunchScreen.storyboard */; };
 		8229AD771F8FB4B500A9D613 /* netfox_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BC020F1C09CDA000C17F3A /* netfox_ios.framework */; };
+		8229C99E230A36720012CE6B /* NFXAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C99D230A36720012CE6B /* NFXAdditions.swift */; };
+		8229C99F230A36780012CE6B /* NFXAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229C99D230A36720012CE6B /* NFXAdditions.swift */; };
+		8229C9A0230A367F0012CE6B /* SelectSessionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825160592306D70F003FFEC1 /* SelectSessionLogViewController.swift */; };
+		8229C9A1230A37100012CE6B /* SelectSessionLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8251605A2306D70F003FFEC1 /* SelectSessionLogViewController.storyboard */; };
 		823CA9072303D7E1002F55C2 /* NFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BA711C833ABC00F9FBEA /* NFX.swift */; };
 		823CA9082303D7E1002F55C2 /* NFXAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BA721C833ABC00F9FBEA /* NFXAssets.swift */; };
 		823CA9092303D7E1002F55C2 /* NFXAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201A39C204E3E3F00AB2C3D /* NFXAuthenticationChallengeSender.swift */; };
@@ -43,7 +47,6 @@
 		823CA91F2303D7EF002F55C2 /* NFXListController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAA91C833AC700F9FBEA /* NFXListController_iOS.swift */; };
 		823CA9202303D7EF002F55C2 /* NFXSettingsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAAA1C833AC700F9FBEA /* NFXSettingsController_iOS.swift */; };
 		823CA9212303D7EF002F55C2 /* NFXStatisticsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F8BAAB1C833AC700F9FBEA /* NFXStatisticsController_iOS.swift */; };
-		8251605B2306D710003FFEC1 /* NFXAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825160582306D70F003FFEC1 /* NFXAdditions.swift */; };
 		8251605C2306D710003FFEC1 /* SelectSessionLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825160592306D70F003FFEC1 /* SelectSessionLogViewController.swift */; };
 		8251605D2306D710003FFEC1 /* SelectSessionLogViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8251605A2306D70F003FFEC1 /* SelectSessionLogViewController.storyboard */; };
 		826C4E9E1F979AB3008B440C /* NFXLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 826C4E9C1F979AB3008B440C /* NFXLoader.h */; };
@@ -97,7 +100,7 @@
 		8229AD6B1F8FB34300A9D613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8229AD6E1F8FB34300A9D613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8229AD701F8FB34300A9D613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		825160582306D70F003FFEC1 /* NFXAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXAdditions.swift; sourceTree = "<group>"; };
+		8229C99D230A36720012CE6B /* NFXAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXAdditions.swift; sourceTree = "<group>"; };
 		825160592306D70F003FFEC1 /* SelectSessionLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSessionLogViewController.swift; sourceTree = "<group>"; };
 		8251605A2306D70F003FFEC1 /* SelectSessionLogViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectSessionLogViewController.storyboard; sourceTree = "<group>"; };
 		826C4E9C1F979AB3008B440C /* NFXLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFXLoader.h; sourceTree = "<group>"; };
@@ -231,7 +234,7 @@
 		B3F8BAA41C833AC700F9FBEA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				825160582306D70F003FFEC1 /* NFXAdditions.swift */,
+				8229C99D230A36720012CE6B /* NFXAdditions.swift */,
 				8251605A2306D70F003FFEC1 /* SelectSessionLogViewController.storyboard */,
 				825160592306D70F003FFEC1 /* SelectSessionLogViewController.swift */,
 				3708AD5922D4A9DD0050DB7D /* NFXURLDetailsControllerViewController.swift */,
@@ -381,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8229AD6F1F8FB34300A9D613 /* LaunchScreen.storyboard in Resources */,
+				8229C9A1230A37100012CE6B /* SelectSessionLogViewController.storyboard in Resources */,
 				8229AD6C1F8FB34300A9D613 /* Assets.xcassets in Resources */,
 				8229AD6A1F8FB34300A9D613 /* Main.storyboard in Resources */,
 			);
@@ -412,6 +416,7 @@
 				823CA9212303D7EF002F55C2 /* NFXStatisticsController_iOS.swift in Sources */,
 				026274D9214C6BC400AE1BDF /* WKWebViewController.swift in Sources */,
 				823CA91C2303D7EF002F55C2 /* NFXHelper_iOS.swift in Sources */,
+				8229C99F230A36780012CE6B /* NFXAdditions.swift in Sources */,
 				823CA9132303D7E1002F55C2 /* NFXListController.swift in Sources */,
 				8229AD671F8FB34300A9D613 /* ImageViewController.swift in Sources */,
 				823CA9202303D7EF002F55C2 /* NFXSettingsController_iOS.swift in Sources */,
@@ -423,6 +428,7 @@
 				8229AD651F8FB34300A9D613 /* AppDelegate.swift in Sources */,
 				82F6E1031F8FD81C002B31BD /* TextViewController.swift in Sources */,
 				823CA91F2303D7EF002F55C2 /* NFXListController_iOS.swift in Sources */,
+				8229C9A0230A367F0012CE6B /* SelectSessionLogViewController.swift in Sources */,
 				82F6E1051F8FF55D002B31BD /* WebViewController.swift in Sources */,
 				823CA9112303D7E1002F55C2 /* NFXImageBodyDetailsController.swift in Sources */,
 				823CA9122303D7E1002F55C2 /* NFXInfoController.swift in Sources */,
@@ -474,7 +480,7 @@
 				B3F8BA9C1C833ABC00F9FBEA /* NFXRawBodyDetailsController.swift in Sources */,
 				B3F8BAAF1C833AC700F9FBEA /* NFXListCell_iOS.swift in Sources */,
 				B3F8BA961C833ABC00F9FBEA /* NFXInfoController.swift in Sources */,
-				8251605B2306D710003FFEC1 /* NFXAdditions.swift in Sources */,
+				8229C99E230A36720012CE6B /* NFXAdditions.swift in Sources */,
 				B3F8BAAC1C833AC700F9FBEA /* NFXDetailsController_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

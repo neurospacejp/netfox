@@ -22,7 +22,7 @@ extension UIWindow {
 }
 
 
-@objc class NFXAdditions: NSObject {
+@objc open class NFXAdditions: NSObject {
    
     let fileManager = FileManager.default
     let documentsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -42,6 +42,13 @@ extension UIWindow {
     var concatLogPath: String {
         get {
             return documentsDir + "/" + "session_bundle.log"
+        }
+    }
+   
+    @objc open func showSendLogView(parentVC: UIViewController) {
+        let storyboard = UIStoryboard.init(name: "SelectSessionLogViewController", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "SelectSessionLogViewController") as? SelectSessionLogViewController {
+            parentVC.present(viewController, animated: true, completion: nil)
         }
     }
 }
