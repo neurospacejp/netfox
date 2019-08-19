@@ -17,7 +17,15 @@ class TextViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+   
+    @IBAction func tappedSendLog(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "SelectSessionLogViewController", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "SelectSessionLogViewController") as? SelectSessionLogViewController {
+            self.present(viewController, animated: true, completion: nil)
+        }
+        
+    }
+
     @IBAction func tappedLoad(_ sender: Any) {
         dataTask?.cancel()
         

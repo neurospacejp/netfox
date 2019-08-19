@@ -8,20 +8,6 @@
 
 import UIKit
 
-extension UIWindow {
-  override open func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?)
-  {
-    if (event!.type == .motion && event!.subtype == .motionShake) {
-        
-        let storyboard = UIStoryboard.init(name: "SelectSessionLogViewController", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "SelectSessionLogViewController") as? SelectSessionLogViewController {
-            self.rootViewController?.present(viewController, animated: true, completion: nil)
-        }
-    }
-  }
-}
-
-
 @objc open class NFXAdditions: NSObject {
    
     let fileManager = FileManager.default
@@ -45,12 +31,6 @@ extension UIWindow {
         }
     }
    
-    @objc open func showSendLogView(parentVC: UIViewController) {
-        let storyboard = UIStoryboard.init(name: "SelectSessionLogViewController", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "SelectSessionLogViewController") as? SelectSessionLogViewController {
-            parentVC.present(viewController, animated: true, completion: nil)
-        }
-    }
 }
 
 extension NFXAdditions {
@@ -96,7 +76,7 @@ extension NFXAdditions {
     }
     
     // 新しいファイル名を作る
-    func stringDate(data: Date) -> String {
+    open func stringDate(data: Date) -> String {
         let df = DateFormatter()
         df.dateFormat = "yyyyMMdd_HHmmss"
         let nowString = df.string(from: data)
@@ -104,14 +84,14 @@ extension NFXAdditions {
     }
     
     // for table view
-    func getSessionLogFileNames() -> [String] {
+    open func getSessionLogFileNames() -> [String] {
         let files = ((try? fileManager.contentsOfDirectory(atPath: storedLogDirString)) ?? [])
             .filter { $0.contains("session_") }
         return files
     }
     
     // for mail
-    func attachData(files: [String]) -> Data? {
+    open func attachData(files: [String]) -> Data? {
 
         // output file
         if !fileManager.fileExists(atPath: concatLogPath) {
