@@ -12,6 +12,7 @@ import UIKit
    
     let fileManager = FileManager.default
     let documentsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+    private let currentlogName = "session.log"
     
     private var sessionLogPathString: String {
         get {
@@ -48,6 +49,7 @@ extension NFXAdditions {
         let files = getSessionLogFileNames()
 
         let fullpaths = files
+            .filter { $0 != currentlogName }
             .filter { $0.contains("session_") }
             .map { storedLogDirString + "/" + $0 }
         
@@ -87,7 +89,8 @@ extension NFXAdditions {
     open func getSessionLogFileNames() -> [String] {
         let files = ((try? fileManager.contentsOfDirectory(atPath: storedLogDirString)) ?? [])
             .filter { $0.contains("session_") }
-        return files
+            .sorted(by: >)
+        return [currentlogName] + files
     }
     
     // for mail
@@ -113,8 +116,14 @@ extension NFXAdditions {
     }
 
     private func concatFile(filePath: String) {
-        
-        let logFullPath = storedLogDirString + "/" + filePath
+
+        let logFullPath = { () -> String in
+            if filePath != currentlogName {
+                return storedLogDirString + "/" + filePath
+            } else {
+               return documentsDir + "/" + currentlogName
+            }
+        }()
         
         let fileUrl = URL(fileURLWithPath: logFullPath)
         if let data = self.dataFromFileUrl(fileUrl) {

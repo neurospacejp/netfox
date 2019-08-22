@@ -24,7 +24,7 @@ open class SelectSessionLogViewController: UIViewController, UITableViewDelegate
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        self.sessionLogFileNames = nfxAdditions.getSessionLogFileNames().sorted(by: >)
+        self.sessionLogFileNames = nfxAdditions.getSessionLogFileNames()
         tableView.reloadData()
     }
 
