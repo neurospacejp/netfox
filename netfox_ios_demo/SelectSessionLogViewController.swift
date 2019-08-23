@@ -20,8 +20,6 @@ open class SelectSessionLogViewController: UIViewController, UITableViewDelegate
     
     private let nfxAdditions = NFXAdditions()
 
-    let mailViewController = MFMailComposeViewController()
-
     override open func viewDidLoad() {
         super.viewDidLoad()
         self.sessionLogFileNames = nfxAdditions.getSessionLogFileNames()
@@ -75,7 +73,7 @@ extension SelectSessionLogViewController: MFMailComposeViewControllerDelegate {
     @IBAction func showMailer() {
         
       if MFMailComposeViewController.canSendMail() {
-        
+        let mailViewController = MFMailComposeViewController()
         mailViewController.mailComposeDelegate = self
         mailViewController.setSubject("session.log")
         //let toRecipients = ["aaaaaaaa@gmail.com"]
@@ -114,7 +112,7 @@ extension SelectSessionLogViewController: MFMailComposeViewControllerDelegate {
             break
         }
         
-      mailViewController.dismiss(animated: true, completion: { [weak self] in
+      controller.dismiss(animated: true, completion: { [weak self] in
         self?.selectedIndexs = []
         self?.tableView.reloadData()
       })

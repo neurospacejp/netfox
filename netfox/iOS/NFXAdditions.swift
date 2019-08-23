@@ -104,7 +104,7 @@ extension NFXAdditions {
        
         // concat log
         files.forEach { file in
-            if file.contains("session_") {
+            if file.contains("session_") || file == currentlogName {
                 concatFile(filePath: file)
             }
         }
