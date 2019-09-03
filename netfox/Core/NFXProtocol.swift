@@ -55,7 +55,9 @@ open class NFXProtocol: URLProtocol
     
     override open func startLoading()
     {
-        model.saveRequest(request)
+        if (shouldSaveLog(request: request)) {
+            model.saveRequest(request)
+        }
         
         let mutableRequest = (request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
         URLProtocol.setProperty(true, forKey: NFXProtocol.nfxInternalKey, in: mutableRequest)
@@ -76,6 +78,13 @@ open class NFXProtocol: URLProtocol
 }
 
 extension NFXProtocol: URLSessionDataDelegate {
+    
+    private func shouldSaveLog(request: URLRequest) -> Bool {
+        guard let urlString = request.url?.absoluteString else { return false }
+        let isContain = urlString.contains("neurospace.jp")
+        return !isContain
+    }
+    
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         responseData?.append(data)
         
@@ -103,17 +112,19 @@ extension NFXProtocol: URLSessionDataDelegate {
             return
         }
         
-        model.saveRequestBody(request)
-        model.logRequest(request)
-        
-        if error != nil {
-            model.saveErrorResponse()
-        } else if let response = response {
-            let data = (responseData ?? NSMutableData()) as Data
-            model.saveResponse(response, data: data)
+        if (shouldSaveLog(request: request)) {
+            model.saveRequestBody(request)
+            model.logRequest(request)
+            
+            if error != nil {
+                model.saveErrorResponse()
+            } else if let response = response {
+                let data = (responseData ?? NSMutableData()) as Data
+                model.saveResponse(response, data: data)
+            }
+            
+            NFXHTTPModelManager.sharedInstance.add(model)
         }
-        
-        NFXHTTPModelManager.sharedInstance.add(model)
         NotificationCenter.default.post(name: .NFXReloadData, object: nil)
     }
     

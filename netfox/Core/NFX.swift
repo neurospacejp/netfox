@@ -72,6 +72,10 @@ open class NFX: NSObject
         }
 
         self.started = true
+        
+        NFXAdditions().deleteOldLogFile()
+        NFXAdditions().storeLogFile()
+
         register()
         enable()
         clearOldData()
