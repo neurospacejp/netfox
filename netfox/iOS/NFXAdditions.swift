@@ -92,7 +92,16 @@ extension NFXAdditions {
             .sorted(by: >)
         return [currentlogName] + files
     }
-    
+   
+    open func deleteSessionLogFile(fileName: String) -> Bool {
+        do {
+            try fileManager.removeItem(atPath: storedLogDirString + "/" + fileName)
+        } catch {
+            return false
+        }
+        return true
+    }
+
     // for mail
     open func attachData(files: [String]) -> Data? {
         
